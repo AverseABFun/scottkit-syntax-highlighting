@@ -1,0 +1,26 @@
+# 1 room, 0 items, 5 actions
+# 0 messages, 0 treasures, 16 verbs/nouns
+ident 1
+version 406
+wordlen 3
+maxload 5
+lighttime 125
+start FOREST
+treasury FOREST
+
+verbgroup GO ENT RUN WAL CLI
+verbgroup TAK GET PIC CAT
+verbgroup DRO REL SPI LEA
+verbgroup LOO SHO SEE
+
+room FOREST "FOREST"
+	exit north FOREST
+	exit south FOREST
+	exit east FOREST
+	exit west FOREST
+
+action SCO: score
+action LOO: look
+action INV: inventory
+action SAV: save_game
+action QUI: game_over

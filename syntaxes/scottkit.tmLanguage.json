@@ -1,0 +1,84 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Scottkit",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#expressions"
+		},
+		{
+			"include": "#percent"
+		},
+		{
+			"include": "#line-comment"
+		},
+		{
+			"include": "#nums"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.scottkit",
+				"match": "\\b(ident|version|wordlen|maxload|lighttime|unknown[0-9]|verbgroup|start|treasury|occur|action|nowhere|room|exit|when|at|here|and|carried|present|flag|called|noungroup|item)\\b"
+			},
+			{
+				"name": "support.function.scottkit",
+				"match": "\\b(print|goto|die|look|score|set_dark|clear_flag|get|drop|set_flag|inventory|put|game_over|save_game|clear|clear_dark)\\b"
+			},
+			{
+				"name": "support.function.scottkit",
+				"match": "destroy[0-9]*"
+			},
+			{
+				"name": "keyword.other.scottkit",
+				"match": "\\b(north|south|east|west|up|down)\\b"
+			}]
+		},
+		"percent": {
+			"patterns": [{
+				"name":"constant.numeric.scottkit",
+				"match": "\\b[0-9]%\\b"
+			}]
+		},
+		"expressions": {
+			"patterns": [{
+				"name":"keyword.operator.not.scottkit",
+				"match": "\\!"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.scottkit",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.scottkit",
+					"match": "\\\\."
+				}
+			]
+		},
+		"line-comment": {
+			"patterns": [
+				{
+					"name": "comment.line.hashtag.scottkit",
+					"match": "#.*$"
+				}
+			]
+		},
+		"nums": {
+			"patterns": [
+				{
+					"name": "constant.numeric.scottkit",
+					"match": "[0-9]"
+				}
+			]
+		}
+	},
+	"scopeName": "source.scottkit"
+}

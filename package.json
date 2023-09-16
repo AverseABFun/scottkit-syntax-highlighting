@@ -1,0 +1,25 @@
+{
+  "name": "scottkit-syntax-highlighting",
+  "displayName": "scottkit-syntax-highlighting",
+  "description": "Syntax highlighting for scottkit games",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "scottkit",
+      "aliases": ["Scottkit", "scottkit"],
+      "extensions": [".sck"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "scottkit",
+      "scopeName": "source.scottkit",
+      "path": "./syntaxes/scottkit.tmLanguage.json"
+    }]
+  }
+}
